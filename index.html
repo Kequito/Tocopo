@@ -1,1 +1,93 @@
-x
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#1f4a2a">
+<title>Tocopo</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' shape-rendering='crispEdges'%3E%3Crect x='8' y='1' width='4' height='1' fill='%238fd16a'/%3E%3Crect x='7' y='2' width='6' height='5' fill='%238fd16a'/%3E%3Crect x='13' y='3' width='3' height='2' fill='%238fd16a'/%3E%3Crect x='9' y='3' width='1' height='1' fill='%23141018'/%3E%3Crect x='5' y='7' width='8' height='6' fill='%238fd16a'/%3E%3Crect x='0' y='10' width='5' height='2' fill='%238fd16a'/%3E%3Crect x='6' y='13' width='2' height='3' fill='%234f9a3e'/%3E%3Crect x='10' y='13' width='2' height='3' fill='%234f9a3e'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="wrap">
+  <div id="game">
+    <canvas id="screen" width="512" height="288"></canvas>
+
+    <div id="hud" class="hidden">
+      <div class="box hud-main">
+        <div id="hud-region"></div>
+        <div id="hud-lv"></div>
+        <div class="hud-bar"><b>VID</b><div class="bar hp"><i id="hud-hpbar"></i></div><span id="hud-hp"></span></div>
+        <div class="hud-bar"><b>ENE</b><div class="bar ene"><i id="hud-enebar"></i></div><span id="hud-ene"></span></div>
+        <div id="hud-res"></div>
+      </div>
+      <div class="box hud-side">
+        <div class="hud-inv-title">Inventario</div>
+        <div id="hud-inv"></div>
+        <div id="hud-muts"></div>
+      </div>
+    </div>
+    <div id="nodeinfo" class="box hidden"></div>
+
+    <div id="battle-ui" class="hidden">
+      <div id="enemy-boxes"></div>
+      <div id="battle-panel" class="box">
+        <div id="battle-left">
+          <div id="battle-log"></div>
+          <div id="battle-actions" class="hidden"></div>
+        </div>
+        <div id="player-box"></div>
+      </div>
+    </div>
+
+    <div id="title-ui" class="hidden">
+      <div class="logo">TOCOPO</div>
+      <div class="tagline">Roguelike de mutaciones prehistóricas</div>
+      <div id="title-menu"></div>
+      <div class="credits">Flechas / WASD · Z / Enter · X / Esc</div>
+    </div>
+
+    <div id="banner"></div>
+    <div id="dialog" class="hidden"><div class="speaker"></div><div class="text"></div><div class="next">▼</div></div>
+    <div id="menu-layer"></div>
+    <div id="toast"></div>
+    <div id="fade" class="on"></div>
+  </div>
+</div>
+
+<div id="touch" class="hidden">
+  <div class="dpad">
+    <div class="tb up" data-k="up">▲</div>
+    <div class="tb left" data-k="left">◀</div>
+    <div class="tb right" data-k="right">▶</div>
+    <div class="tb down" data-k="down">▼</div>
+  </div>
+  <div class="abtns">
+    <div class="tb b" data-k="back">B</div>
+    <div class="tb a" data-k="ok">A</div>
+  </div>
+</div>
+
+<!-- Datos (balance) -->
+<script src="data/config.js"></script>
+<script src="data/mutaciones.js"></script>
+<script src="data/enemigos.js"></script>
+<script src="data/objetos.js"></script>
+<script src="data/eventos.js"></script>
+<script src="data/regiones.js"></script>
+<script src="data/textos.js"></script>
+<!-- Lógica -->
+<script src="js/ui.js"></script>
+<script src="js/rng.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/sprites.js"></script>
+<script src="js/run.js"></script>
+<script src="js/nodemap.js"></script>
+<script src="js/battle.js"></script>
+<script src="js/nodes.js"></script>
+<script src="js/game.js"></script>
+</body>
+</html>
